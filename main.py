@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 # Email Address
 EMAIL = "ayodejioni1505@gmail.com"
 # API Repo Link
-GITHUB_URL = "https://github.com/Ayo-Oni-515/stage-0-backend.git"
+GITHUB_URL = "https://github.com/Ayo-Oni-515/stage-0-backend"
 
 # API Response
 data = {
