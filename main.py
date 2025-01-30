@@ -8,12 +8,8 @@ EMAIL = "ayodejioni1505@gmail.com"
 # API Repo Link
 GITHUB_URL = "https://github.com/Ayo-Oni-515/stage-0-backend"
 
-# API Response
-data = {
-    "email": EMAIL,
-    "current_datetime": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-    "github_url": GITHUB_URL
-}
+def get_time():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 #FastAPI instace creation
 app = FastAPI()
@@ -30,4 +26,9 @@ app.add_middleware(
 
 @app.get('/')
 async def index():
-    return data
+    # API Response
+    return {
+        "email": EMAIL,
+        "current_datetime": get_time(),
+        "github_url": GITHUB_URL
+}
